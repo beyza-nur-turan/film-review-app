@@ -1,0 +1,28 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+button{
+    color: #63A69F;
+    
+        background-color: transparent; /* Arka plan rengini şeffaf yap */
+        border: none; /* Kenarlığı kaldır */
+        padding: 0; /* Yastık (padding) değerlerini sıfırla */
+        font: inherit; /* Yazı tipini kalıtım olarak al */
+        cursor: pointer; /* İşaretçiyi bir el işareti olarak göster */
+        outline: none; /* Odaklanma rengini kaldır */
+        position: relative;
+      
+ }
+ button:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px; /* Çizginin kalınlığını ayarlayabilirsiniz */
+    background-color: white; /* Çizgi rengini belirleyebilirsiniz */
+  }
+  
