@@ -1,0 +1,94 @@
+/* Register.css */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Arka plan gradyan rengi */
+.register-background {
+  background: linear-gradient(to right,  #ecf0f1,#bdc3c6 );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ana konteyner */
+.register-container {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  display:inherit;
+  width: 65%;
+  height: 95%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Sol taraf (resim) */
+.register-left {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.register-left img {
+  /* max-width: 100%; */
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: 2px 5px 5px 5px rgba(30, 30, 33, 0.5);
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Sağ taraf (form) */
+.register-right {
+  flex: 1;
+  padding: 40px;
+  display: grid;
+  align-items: center;
+}
+
+.register-right h1 {
+  font-size: 30px;
+  color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+/* Form öğeleri */
+.register-right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-right input {
+  margin-bottom: 5vh;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.register-right button {
+  background-color: #63a69f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.register-right button:hover {
+  background-color: #0b3954;
+}

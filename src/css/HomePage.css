@@ -1,0 +1,60 @@
+html, body, #root {
+    height: 100%;
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ant-layout {
+    height: 100%;
+  }
+  
+  .ant-layout .ant-layout-content {
+    height: calc(100% - 64px); /* Adjust this value based on your header height */
+    overflow: auto; /* Add scroll if necessary */
+  }
+  .antd_header{
+  background-color: #63a69f;
+  color: #63a69f;
+  
+  }
+  /* CSS dosyası, örneğin AppHeader.css */
+
+/* Header bileşeni genel stil */
+.ant-layout-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #001529; /* Header arkaplan rengi */
+    color: #fff; /* Header metin rengi */
+  }
+  
+  /* Logo stil */
+  .logo img {
+    max-width: 100px; /* Logo maksimum genişlik */
+    width: 28vh;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Menü stil */
+ 
+  
+  
+  
+  /* Avatar stil */
+  .ant-avatar {
+    background-color: #1890ff; /* Avatar arkaplan rengi */
+    color: #fff; /* Avatar metin rengi */
+  }
+  
+  /* Avatar iç ikon stil */
+  .ant-avatar-icon {
+    background-color: #fff; /* İkon arkaplan rengi */
+    color: #001529; /* İkon metin rengi */
+  }
+  
+  
