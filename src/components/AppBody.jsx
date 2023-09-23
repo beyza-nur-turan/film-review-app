@@ -1,11 +1,25 @@
 
-import bodypicture from "../assets/body.jpg"
+import video from "../assets/video.mp4";
+import "../css/appBody.css";
 function AppBody() {
+
+  
   return (
-    <div>
-      <img style={{backgroundRepeat:"no-repeat",backgroundPosition:"center top", width:"100%",height:"50vh",top:0,position:"relative",objectFit:"revert" ,zIndex:"-1px",left:0,backgroundSize:"cover"}} src={bodypicture}/>
+    <div className="bodyContainer">
+      <div className="video-container">
+        video alanııı
+        <video
+          loop
+          muted
+          autoPlay
+          src={video}
+          type="video/mp4"
+        />
+      </div>
+      <div className="bodyContent">contentt</div>
+      <div className="bodyLower">lowerrr</div>
     </div>
-  )
+  );
 }
 
 export default AppBody;

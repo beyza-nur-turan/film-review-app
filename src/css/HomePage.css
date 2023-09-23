@@ -15,6 +15,19 @@ body{
   color: white; /* Header metin rengi */
   padding: 20px;
 }
+/* .connect{
+  background-repeat: no-repeat;
+  background-position: top top;
+  width: 100%;
+  height: 45vh;
+  top: 0;
+  left: 0;
+  position: relative;
+  object-fit: revert;
+  z-index: -1px;
+  background-size: cover;
+  background-image: url("../assets/body.jpg");
+} */
 
 .body {
   flex: 3; /* Body'nin 3/5 genişlikte olmasını istiyorsanız 3 yerine 3fr kullanabilirsiniz */
