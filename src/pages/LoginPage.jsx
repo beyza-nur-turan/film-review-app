@@ -3,6 +3,7 @@ import FilmRegister from "../assets/FilmRegister.png"
 import { useNavigate } from 'react-router';
 import { useState } from 'react';
 import { login } from '../firebase';
+import Swal from 'sweetalert2';
 
 function Login() {
     const navigate = useNavigate();
@@ -11,25 +12,32 @@ function Login() {
     }
     const [email,setEmail] =useState("");
   const [password,setPassword] =useState("");
-  const handleSubmit= async e=>{
-   
-      if (!email || !password) {
-        console.error('E-posta veya şifre alanı boş olamaz!.');
-        return;
-      }
-      
-    e.preventDefault()
-    const user =await login(email,password)
-    console.log("user",user)
-    if(user) {
-      navigate("/")
-    }
-    else{
-      alert("User not found")
-    }
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     
+    if (!email || !password) {
+      console.error('E-posta veya şifre alanı boş olamaz!.');
+      return;
+    }
+    
+    try {
+      const user = await login(email, password);
+      console.log("user", user);
+      if (user) {
+        navigate("/");
+      } else {
+        Swal.fire({
+          title: 'Kullanıcı Bulunamadı!',
+          icon: 'error',
+          text: 'Lütfen geçerli bir e-posta ve şifre girin.',
+        });
+      }
+    } catch (error) {
+      console.error('Giriş sırasında bir hata oluştu:', error.message);
+      // Firebase hata iletisini görüntüle
+    }
   }
+  
   return (
     <div className="register-background">
       <div className="register-container">
